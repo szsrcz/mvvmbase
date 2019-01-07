@@ -10,10 +10,11 @@ import com.goldze.mvvmhabit.R;
 import com.goldze.mvvmhabit.entity.DemoEntity;
 import com.goldze.mvvmhabit.ui.network.detail.DetailFragment;
 
-import cn.ruicz.utilcode.util.ToastUtils;
+
 import cn.ruicz.basecore.base.ItemViewModel;
 import cn.ruicz.basecore.binding.command.BindingAction;
 import cn.ruicz.basecore.binding.command.BindingCommand;
+import cn.ruicz.basecore.util.ToastUtils;
 
 /**
  * Created by goldze on 2017/7/17.

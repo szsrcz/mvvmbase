@@ -33,13 +33,16 @@ android {
 dependencies {
     api fileTree(include: ['*.jar'], dir: 'libs')
 
-    api project(':lib.utils')
+//    api project(':lib.utils')
 
     testImplementation 'junit:junit:4.12'
     //support
     api rootProject.ext.support["support-v4"]
     api rootProject.ext.support["appcompat-v7"]
     api rootProject.ext.support["recyclerview-v7"]
+    api rootProject.ext.support.design
+    api 'com.google.code.gson:gson:2.8.5'
+
     //rxjava
     api rootProject.ext.dependencies.rxjava
     api rootProject.ext.dependencies.rxandroid

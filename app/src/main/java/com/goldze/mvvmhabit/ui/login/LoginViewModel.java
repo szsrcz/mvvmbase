@@ -13,7 +13,7 @@ import com.uber.autodispose.android.lifecycle.AndroidLifecycleScopeProvider;
 
 import java.util.concurrent.TimeUnit;
 
-import cn.ruicz.utilcode.util.ToastUtils;
+import cn.ruicz.basecore.util.ToastUtils;
 import io.reactivex.Observable;
 import io.reactivex.functions.Consumer;
 import cn.ruicz.basecore.base.BaseViewModel;

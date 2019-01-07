@@ -2,7 +2,7 @@ package cn.ruicz.basecore.manager;
 
 import android.os.Environment;
 
-import cn.ruicz.utilcode.util.FileUtils;
+import cn.ruicz.basecore.util.FileUtils;
 
 
 /**

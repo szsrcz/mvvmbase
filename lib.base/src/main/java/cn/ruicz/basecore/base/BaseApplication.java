@@ -7,8 +7,8 @@ import android.support.annotation.NonNull;
 
 import cn.ruicz.basecore.BuildConfig;
 import cn.ruicz.basecore.LibBase;
-import cn.ruicz.utilcode.util.AppUtils;
-import cn.ruicz.utilcode.util.Utils;
+import cn.ruicz.basecore.util.AppUtils;
+import cn.ruicz.basecore.util.Utils;
 
 /**
  * Created by goldze on 2017/6/15.

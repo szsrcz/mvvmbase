@@ -14,9 +14,9 @@ import cn.ruicz.basecore.adapter.OnLoadMoreListener;
 import cn.ruicz.basecore.adapter.RecyclerViewDecoration;
 import cn.ruicz.basecore.databinding.FragmentRecyclerBinding;
 import cn.ruicz.basecore.http.SimpleObserver;
+import cn.ruicz.basecore.util.NetworkUtils;
+import cn.ruicz.basecore.util.ToastUtils;
 import cn.ruicz.basecore.utils.KLog;
-import cn.ruicz.utilcode.util.NetworkUtils;
-import cn.ruicz.utilcode.util.ToastUtils;
 import io.reactivex.functions.Action;
 import io.reactivex.functions.Consumer;
 

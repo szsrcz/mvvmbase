@@ -24,8 +24,8 @@ import java.lang.reflect.Type;
 import java.util.Map;
 
 import cn.ruicz.basecore.R;
+import cn.ruicz.basecore.util.ToastUtils;
 import cn.ruicz.basecore.utils.MaterialDialogUtils;
-import cn.ruicz.utilcode.util.ToastUtils;
 import cn.ruicz.basecore.base.BaseViewModel.ParameterField;
 import cn.ruicz.basecore.bus.Messenger;
 import cn.ruicz.basecore.utils.MaterialDialogUtils;

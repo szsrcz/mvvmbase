@@ -9,10 +9,12 @@ import com.goldze.mvvmhabit.BR;
 import com.goldze.mvvmhabit.R;
 import com.goldze.mvvmhabit.ui.viewpager.adapter.ViewPagerBindingAdapter;
 
-import cn.ruicz.utilcode.util.ToastUtils;
+
 import cn.ruicz.basecore.base.BaseViewModel;
 import cn.ruicz.basecore.binding.command.BindingCommand;
 import cn.ruicz.basecore.binding.command.BindingConsumer;
+
+import cn.ruicz.basecore.util.ToastUtils;
 import me.tatarka.bindingcollectionadapter2.BindingViewPagerAdapter;
 import me.tatarka.bindingcollectionadapter2.ItemBinding;
 

@@ -14,8 +14,8 @@ import com.goldze.mvvmhabit.BR;
 import com.goldze.mvvmhabit.R;
 import com.goldze.mvvmhabit.databinding.FragmentNetworkBinding;
 
-import cn.ruicz.utilcode.util.ToastUtils;
 import cn.ruicz.basecore.base.BaseFragment;
+import cn.ruicz.basecore.util.ToastUtils;
 import cn.ruicz.basecore.utils.MaterialDialogUtils;
 
 /**

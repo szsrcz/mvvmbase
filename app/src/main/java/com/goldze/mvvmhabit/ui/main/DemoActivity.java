@@ -12,7 +12,8 @@ import com.goldze.mvvmhabit.R;
 import com.goldze.mvvmhabit.databinding.ActivityDemoBinding;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 
-import cn.ruicz.utilcode.util.ToastUtils;
+
+import cn.ruicz.basecore.util.ToastUtils;
 import io.reactivex.functions.Consumer;
 import cn.ruicz.basecore.base.BaseActivity;
 import cn.ruicz.basecore.http.DownLoadManager;

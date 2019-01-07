@@ -4,12 +4,10 @@ import android.app.Activity;
 
 import com.goldze.mvvmhabit.BuildConfig;
 import com.goldze.mvvmhabit.R;
-import com.goldze.mvvmhabit.ui.login.LoginActivity;
-
 import cn.ruicz.basecore.base.BaseApplication;
 import cn.ruicz.basecore.crash.CaocConfig;
+import cn.ruicz.basecore.util.ActivityUtils;
 import cn.ruicz.basecore.utils.KLog;
-import cn.ruicz.utilcode.util.ActivityUtils;
 
 /**
  * Created by goldze on 2017/7/16.
