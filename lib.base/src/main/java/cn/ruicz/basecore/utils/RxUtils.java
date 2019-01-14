@@ -1,6 +1,7 @@
 package cn.ruicz.basecore.utils;
 
 import io.reactivex.Observable;
+import io.reactivex.ObservableSource;
 import io.reactivex.ObservableTransformer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Function;
@@ -17,15 +18,25 @@ public class RxUtils {
      * 线程调度器
      */
     public static <T> ObservableTransformer<T, T> schedulersTransformer() {
-        return (ObservableTransformer) upstream -> upstream.subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread());
+        return (ObservableTransformer) new ObservableTransformer() {
+            @Override
+            public ObservableSource apply(Observable upstream) {
+                return upstream.subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread());
+            }
+        };
     }
 
     public static <T> ObservableTransformer<T, T> exceptionTransformer() {
 
-        return (ObservableTransformer) observable -> observable
+        return (ObservableTransformer) new ObservableTransformer() {
+            @Override
+            public ObservableSource apply(Observable observable) {
+                return observable
 //                        .map(new HandleFuc<T>())  //这里可以取出BaseResponse中的Result
-                .onErrorResumeNext(new HttpResponseFunc());
+                        .onErrorResumeNext(new HttpResponseFunc());
+            }
+        };
     }
 
     private static class HttpResponseFunc<T> implements Function<Throwable, Observable<T>> {

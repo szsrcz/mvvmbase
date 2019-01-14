@@ -7,7 +7,7 @@ import android.content.SharedPreferences;
 
 import java.util.Map;
 
-import cn.ruicz.basecore.util.Utils;
+import cn.ruicz.basecore.utils.Utils;
 
 /**
  * Created by CLW on 2017/4/5.

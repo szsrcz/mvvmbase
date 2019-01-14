@@ -6,8 +6,8 @@ import android.os.Handler;
 
 import cn.ruicz.basecore.crash.CaocConfig;
 import cn.ruicz.basecore.manager.SPManager;
-import cn.ruicz.basecore.util.ActivityUtils;
-import cn.ruicz.basecore.util.Utils;
+import cn.ruicz.basecore.utils.ActivityUtils;
+import cn.ruicz.basecore.utils.Utils;
 import me.yokeyword.fragmentation.BuildConfig;
 import me.yokeyword.fragmentation.Fragmentation;
 import me.yokeyword.fragmentation.helper.ExceptionHandler;

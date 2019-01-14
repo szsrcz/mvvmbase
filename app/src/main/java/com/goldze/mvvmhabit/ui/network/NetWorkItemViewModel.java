@@ -14,7 +14,7 @@ import com.goldze.mvvmhabit.ui.network.detail.DetailFragment;
 import cn.ruicz.basecore.base.ItemViewModel;
 import cn.ruicz.basecore.binding.command.BindingAction;
 import cn.ruicz.basecore.binding.command.BindingCommand;
-import cn.ruicz.basecore.util.ToastUtils;
+import cn.ruicz.basecore.utils.ToastUtils;
 
 /**
  * Created by goldze on 2017/7/17.

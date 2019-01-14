@@ -4,7 +4,6 @@ import android.Manifest;
 import android.app.ProgressDialog;
 import android.arch.lifecycle.Observer;
 import android.databinding.Observable;
-import android.os.Bundle;
 import android.support.annotation.Nullable;
 
 import com.goldze.mvvmhabit.BR;
@@ -13,7 +12,7 @@ import com.goldze.mvvmhabit.databinding.ActivityDemoBinding;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 
 
-import cn.ruicz.basecore.util.ToastUtils;
+import cn.ruicz.basecore.utils.ToastUtils;
 import io.reactivex.functions.Consumer;
 import cn.ruicz.basecore.base.BaseActivity;
 import cn.ruicz.basecore.http.DownLoadManager;

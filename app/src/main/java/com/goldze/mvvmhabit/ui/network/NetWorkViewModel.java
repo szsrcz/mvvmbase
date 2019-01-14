@@ -18,7 +18,7 @@ import com.uber.autodispose.android.lifecycle.AndroidLifecycleScopeProvider;
 import java.util.concurrent.TimeUnit;
 
 
-import cn.ruicz.basecore.util.ToastUtils;
+import cn.ruicz.basecore.utils.ToastUtils;
 import io.reactivex.Observable;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Action;
@@ -98,17 +98,20 @@ public class NetWorkViewModel extends BaseViewModel {
                         }
                     })
                     .as(AutoDispose.autoDisposable(AndroidLifecycleScopeProvider.from(getLifecycleOwner())))
-                    .subscribe((Consumer<Object>) o -> {
-                        //刷新完成收回
-                        uc.finishLoadmore.set(!uc.finishLoadmore.get());
-                        //模拟一部分假数据
-                        for (int i = 0; i < 10; i++) {
-                            DemoEntity.ItemsEntity item = new DemoEntity.ItemsEntity();
-                            item.setId(-1);
-                            item.setName("模拟条目" + itemIndex++);
-                            NetWorkItemViewModel itemViewModel = new NetWorkItemViewModel(NetWorkViewModel.this, item);
-                            //双向绑定动态添加Item
-                            observableList.add(itemViewModel);
+                    .subscribe(new Consumer<Object>() {
+                        @Override
+                        public void accept(Object o) throws Exception {
+                            //刷新完成收回
+                            uc.finishLoadmore.set(!uc.finishLoadmore.get());
+                            //模拟一部分假数据
+                            for (int i = 0; i < 10; i++) {
+                                DemoEntity.ItemsEntity item = new DemoEntity.ItemsEntity();
+                                item.setId(-1);
+                                item.setName("模拟条目" + itemIndex++);
+                                NetWorkItemViewModel itemViewModel = new NetWorkItemViewModel(NetWorkViewModel.this, item);
+                                //双向绑定动态添加Item
+                                observableList.add(itemViewModel);
+                            }
                         }
                     });
         }
@@ -129,7 +132,7 @@ public class NetWorkViewModel extends BaseViewModel {
                     }
                 })
                 .as(AutoDispose.autoDisposable(AndroidLifecycleScopeProvider.from(getLifecycleOwner())))
-                .subscribe(new Consumer<BaseResponse<DemoEntity>>() {
+                .subscribe((Consumer) new Consumer<BaseResponse<DemoEntity>>() {
                     @Override
                     public void accept(BaseResponse<DemoEntity> response) throws Exception {
                         itemIndex = 0;

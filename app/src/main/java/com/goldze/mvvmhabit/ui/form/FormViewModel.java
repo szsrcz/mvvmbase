@@ -21,7 +21,7 @@ import cn.ruicz.basecore.binding.command.BindingAction;
 import cn.ruicz.basecore.binding.command.BindingCommand;
 import cn.ruicz.basecore.binding.command.BindingConsumer;
 import cn.ruicz.basecore.binding.viewadapter.spinner.IKeyAndValue;
-import cn.ruicz.basecore.util.ToastUtils;
+import cn.ruicz.basecore.utils.ToastUtils;
 
 /**
  * Created by goldze on 2017/7/17.

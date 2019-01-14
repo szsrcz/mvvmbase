@@ -3,10 +3,9 @@ package cn.ruicz.basecore.http;
 import android.content.Context;
 import android.widget.Toast;
 
-import cn.ruicz.basecore.util.ToastUtils;
+import cn.ruicz.basecore.utils.ToastUtils;
 import cn.ruicz.basecore.utils.KLog;
 import io.reactivex.observers.DisposableObserver;
-import cn.ruicz.basecore.utils.KLog;
 
 /**
  * Created by goldze on 2017/5/10.

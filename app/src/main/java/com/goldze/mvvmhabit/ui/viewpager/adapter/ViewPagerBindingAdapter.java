@@ -10,7 +10,7 @@ import com.goldze.mvvmhabit.databinding.ItemViewpagerBinding;
 import com.goldze.mvvmhabit.ui.viewpager.vm.ViewPagerItemViewModel;
 
 
-import cn.ruicz.basecore.util.ToastUtils;
+import cn.ruicz.basecore.utils.ToastUtils;
 import me.tatarka.bindingcollectionadapter2.BindingViewPagerAdapter;
 
 /**

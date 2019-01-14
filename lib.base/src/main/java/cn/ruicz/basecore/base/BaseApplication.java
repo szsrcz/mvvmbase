@@ -4,11 +4,12 @@ import android.app.Activity;
 import android.app.Application;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.multidex.MultiDex;
 
 import cn.ruicz.basecore.BuildConfig;
 import cn.ruicz.basecore.LibBase;
-import cn.ruicz.basecore.util.AppUtils;
-import cn.ruicz.basecore.util.Utils;
+import cn.ruicz.basecore.utils.AppUtils;
+import cn.ruicz.basecore.utils.Utils;
 
 /**
  * Created by goldze on 2017/6/15.
@@ -20,6 +21,7 @@ public class BaseApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        MultiDex.install(this);
         setApplication(this);
 
         LibBase.builder(this).spname(AppUtils.getAppPackageName()).debug(BuildConfig.DEBUG).install();

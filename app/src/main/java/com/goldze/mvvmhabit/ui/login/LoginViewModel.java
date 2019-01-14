@@ -13,8 +13,9 @@ import com.uber.autodispose.android.lifecycle.AndroidLifecycleScopeProvider;
 
 import java.util.concurrent.TimeUnit;
 
-import cn.ruicz.basecore.util.ToastUtils;
+import cn.ruicz.basecore.utils.ToastUtils;
 import io.reactivex.Observable;
+import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
 import cn.ruicz.basecore.base.BaseViewModel;
 import cn.ruicz.basecore.binding.command.BindingAction;
@@ -98,15 +99,23 @@ public class LoginViewModel extends BaseViewModel {
         Observable.just("")
                 .delay(3, TimeUnit.SECONDS) //延迟3秒
                 .compose(RxUtils.schedulersTransformer()) //线程调度
-                .doOnSubscribe(disposable -> showDialog())
+                .doOnSubscribe(new Consumer<Disposable>() {
+                    @Override
+                    public void accept(Disposable disposable) throws Exception {
+                        LoginViewModel.this.showDialog();
+                    }
+                })
                 .as(AutoDispose.autoDisposable(AndroidLifecycleScopeProvider.from(getLifecycleOwner())))
-                .subscribe((Consumer<Object>) o -> {
-                            dismissDialog();
-                            //进入DemoActivity页面
-                            startActivity(DemoActivity.class);
-                            //关闭页面
-                            finish();
-                        });
+                .subscribe(new Consumer<Object>() {
+                    @Override
+                    public void accept(Object o) throws Exception {
+                        LoginViewModel.this.dismissDialog();
+                        //进入DemoActivity页面
+                        LoginViewModel.this.startActivity(DemoActivity.class);
+                        //关闭页面
+                        LoginViewModel.this.finish();
+                    }
+                });
     }
 
     @Override

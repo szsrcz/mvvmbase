@@ -2,11 +2,8 @@ package com.goldze.mvvmhabit.ui.network;
 
 import android.arch.lifecycle.Observer;
 import android.databinding.Observable;
-import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.view.LayoutInflater;
-import android.view.ViewGroup;
 
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
@@ -15,7 +12,7 @@ import com.goldze.mvvmhabit.R;
 import com.goldze.mvvmhabit.databinding.FragmentNetworkBinding;
 
 import cn.ruicz.basecore.base.BaseFragment;
-import cn.ruicz.basecore.util.ToastUtils;
+import cn.ruicz.basecore.utils.ToastUtils;
 import cn.ruicz.basecore.utils.MaterialDialogUtils;
 
 /**

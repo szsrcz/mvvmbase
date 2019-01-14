@@ -10,6 +10,7 @@ import java.util.concurrent.TimeUnit;
 import io.reactivex.Observable;
 import io.reactivex.ObservableSource;
 import io.reactivex.ObservableTransformer;
+import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 import cn.ruicz.basecore.http.factory.StringConverterFactory;
@@ -46,7 +47,7 @@ public class BaseHttpUtils {
     public static <T> SimpleObserver<T> toSubscribe(LifecycleOwner lifecycleOwner, Observable<T> o, SimpleObserver<T> s) {
         o.compose(applySchedulers())
                 .as(AutoDispose.autoDisposable(AndroidLifecycleScopeProvider.from(lifecycleOwner)))
-                .subscribe(s);
+                .subscribe((Observer) s);
         return s;
     }
 

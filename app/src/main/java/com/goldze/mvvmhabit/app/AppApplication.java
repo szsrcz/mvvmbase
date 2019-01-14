@@ -6,7 +6,7 @@ import com.goldze.mvvmhabit.BuildConfig;
 import com.goldze.mvvmhabit.R;
 import cn.ruicz.basecore.base.BaseApplication;
 import cn.ruicz.basecore.crash.CaocConfig;
-import cn.ruicz.basecore.util.ActivityUtils;
+import cn.ruicz.basecore.utils.ActivityUtils;
 import cn.ruicz.basecore.utils.KLog;
 
 /**

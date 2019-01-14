@@ -9,6 +9,8 @@ android {
         targetSdkVersion 28
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
+
+        multiDexEnabled true
     }
     dataBinding {
         enabled true
@@ -86,4 +88,21 @@ dependencies {
     api('com.github.czy1121:loadinglayout:1.0.1') {
         exclude group: 'com.android.support', module: 'support-annotations'
     }
+
+    //tinker's main Android lib
+//    implementation("com.tencent.tinker:tinker-android-lib:${TINKER_VERSION}") {
+//        changing = true
+//        exclude group: 'com.android.support'
+//    }
+//    annotationProcessor("com.tencent.tinker:tinker-android-anno:${TINKER_VERSION}") {
+//        changing = true
+//        exclude group: 'com.android.support'
+//    }
+//    compileOnly("com.tencent.tinker:tinker-android-anno:${TINKER_VERSION}") {
+//        changing = true
+//        exclude group: 'com.android.support'
+//    }
+
+//    implementation "com.android.support:multidex:1.0.3"
 }
+
